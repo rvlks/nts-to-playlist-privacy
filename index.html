@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- Privacy policy for the NTS to Playlist Chrome extension. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · NTS to Playlist</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08080a; --card: #121216; --border: #34343e;
+      --text: #f4f4f6; --muted: #92929c; --link: #a78bfa;
+      --font: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 2.5rem 16px 3rem; background: var(--bg); color: var(--text); font-family: var(--font); font-weight: 300; line-height: 1.55; }
+    main { max-width: 680px; margin: 0 auto; }
+    h1, h2 { font-weight: 700; text-transform: uppercase; margin: 0; }
+    h1 { font-size: 1.9rem; letter-spacing: -0.02em; line-height: 1.1; }
+    h2 { font-size: 1.05rem; letter-spacing: 0.02em; margin-top: 2rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+    section.card { background: var(--card); border: 2px solid var(--border); border-radius: 2px; padding: 1.1rem 1.4rem 1.3rem; margin-top: 1.5rem; }
+    section.card h2 { margin-top: 0; }
+    p { margin: 0.6rem 0 0; }
+    ul { margin: 0.6rem 0 0; padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    strong { font-weight: 700; }
+    code { font-family: "Space Mono", ui-monospace, Menlo, monospace; font-size: 0.9em; }
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:hover { color: var(--text); }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="sub">NTS to Playlist, a Chrome extension. Last updated: 2026-10-15</p>
+  <p>NTS to Playlist adds the tracks you save on NTS Radio ("My Tracks") to a Spotify playlist you choose. It has no server. This policy explains what it handles and where that goes.</p>
+
+  <section class="card">
+    <h2>The short version</h2>
+    <ul>
+      <li>Nothing is sent to the developer. There are no analytics, no tracking and no error reporting.</li>
+      <li>The extension talks only to nts.live and Spotify, on your behalf, to do the one thing it's for.</li>
+      <li>What it stores stays in your browser, and you can delete all of it.</li>
+    </ul>
+  </section>
+
+  <h2>What the extension reads</h2>
+  <ul>
+    <li><strong>Your NTS My Tracks list</strong> (artist and title of each saved track), read from nts.live through the sign-in you already have in Chrome. The extension never asks for or stores your NTS password, and doesn't read your NTS email address. The NTS sign-in token is used in memory for one read and is never saved.</li>
+    <li><strong>Your Spotify playlist</strong> you chose, so tracks already in it aren't added twice.</li>
+  </ul>
+
+  <h2>Where data goes</h2>
+  <ul>
+    <li><strong>To Spotify</strong> (accounts.spotify.com and api.spotify.com): the sign-in exchange, a search for each new track (artist and title), and adding the matches to your playlist. The extension asks Spotify only for access to your playlists, not your email or profile. Spotify's own privacy policy covers what Spotify does with requests made from your account.</li>
+    <li><strong>To nts.live</strong>: the read of your My Tracks list, made through your own session.</li>
+    <li><strong>Nowhere else.</strong> No data goes to the developer or to any other party.</li>
+  </ul>
+
+  <h2>What is stored, and where</h2>
+  <p>Everything is kept in your browser's storage for this extension (<code>chrome.storage</code>), on your computer. Nothing is synced to your Google account.</p>
+  <ul>
+    <li>The Spotify Client ID you pasted in, and your Spotify user ID (to check the playlist belongs to the signed-in account).</li>
+    <li>Your Spotify sign-in: the long-lived refresh token is encrypted (AES-GCM) with a key that can't be exported from the browser; short-lived access tokens are kept only in memory-backed session storage and are cleared when the browser closes.</li>
+    <li>The playlist you chose, which tracks were already handled, the list of tracks not found on Spotify (artist and title), and the time, counts and any error of the last sync.</li>
+  </ul>
+
+  <h2>How to delete it</h2>
+  <ul>
+    <li><strong>Disconnect</strong> on the extension's setup page deletes the Spotify sign-in and its encryption key from your browser.</li>
+    <li><strong>Removing the extension</strong> from Chrome deletes everything it stored.</li>
+    <li>To also remove the extension's access on Spotify's side, remove your app at <a href="https://www.spotify.com/account/apps/">spotify.com/account/apps</a>.</li>
+  </ul>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version will be posted at this address with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>ssklvr@gmail.com</p>
+
+  <footer>Not affiliated with, endorsed by or connected to NTS Radio or Spotify.</footer>
+</main>
+</body>
+</html>
